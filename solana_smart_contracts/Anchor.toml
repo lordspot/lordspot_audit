@@ -1,0 +1,21 @@
+[toolchain]
+anchor_version = "1.0.2"
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+solana_smart_contracts = "5M2BS7XuZgFtKWBBGdyNy4g3UkgdMvd7gvaFVvabcGWo"
+
+[provider]
+cluster = "https://devnet.helius-rpc.com/?api-key=311a52e8-93ed-49e4-b0c5-acfb3060e402"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "npx ts-node tests/buyTickets.ts"
+view-state = "npx ts-node tests/viewState.ts"
+withdraw = "npx ts-node scripts/transferUSDC.ts"
+
+[hooks]
